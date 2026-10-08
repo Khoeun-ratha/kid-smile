@@ -20,7 +20,12 @@ class SyncService {
 
   SyncService({
     PackRepository? repository,
-    this.baseUrl = 'http://192.168.8.169:8000',
+    // Release builds pass the deployed API:
+    // flutter build apk --dart-define=API_URL=https://<api-host>
+    this.baseUrl = const String.fromEnvironment(
+      'API_URL',
+      defaultValue: 'http://192.168.8.169:8000',
+    ),
   }) : _repository = repository ?? PackRepository();
 
   Future<SyncStatus> syncIfOnline(String language) async {
