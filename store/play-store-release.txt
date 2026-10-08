@@ -187,7 +187,7 @@ Advertising ID ........ No (the app does not use the advertising ID)
 ========================================================================
 
 BEFORE YOU START
-  [ ] Back up D:\Mobile\kid_smile-release\ (upload-keystore.jks and
+  [ ] Back up D:\Mobile\kid_smile\release-keys\ (upload-keystore.jks and
       key.properties.backup, which holds the password) to a USB drive or
       private cloud. Never share it or put it in GitHub. You need it to
       publish every future update.

@@ -9,7 +9,7 @@ through the steps in order.
 | Store text (English + Khmer) | [`listing.md`](listing.md) |
 | Icon, feature graphic, screenshots | [`graphics/`](graphics/) |
 | Privacy policy | [`../PRIVACY.md`](../PRIVACY.md), public link: https://github.com/Khoeun-ratha/kid-smile/blob/main/PRIVACY.md |
-| Upload key | `D:\Mobile\kid_smile-release\` (**outside the repo — back it up!**) |
+| Upload key | `D:\Mobile\kid_smile\release-keys\` (gitignored, never pushed — **back it up!**) |
 | Key fingerprints, restore steps | [`keystore-info.txt`](keystore-info.txt) |
 | One-step release build | `.\store\build-release.ps1` (add `-Bump` for a new version) |
 | Everything above as one text file | [`play-store-release.txt`](play-store-release.txt) |
@@ -18,7 +18,7 @@ through the steps in order.
 
 ## 0. Before you start
 
-1. **Back up the upload key folder** `D:\Mobile\kid_smile-release\`
+1. **Back up the upload key folder** `D:\Mobile\kid_smile\release-keys\`
    (`upload-keystore.jks` + `key.properties.backup`, which holds the
    password) to a USB drive or private cloud storage. Never put it in git
    or share it. Without it you can't publish updates (Google can reset it,

@@ -17,3 +17,6 @@ Thumbs.db
 *.jks
 *.keystore
 key.properties
+
+# Play Store upload key + password. NEVER commit (this repo is public).
+release-keys/

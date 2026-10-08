@@ -3,4 +3,4 @@
 storePassword=YOUR_KEYSTORE_PASSWORD
 keyPassword=YOUR_KEYSTORE_PASSWORD
 keyAlias=upload
-storeFile=D:/Mobile/kid_smile-release/upload-keystore.jks
+storeFile=D:/Mobile/kid_smile/release-keys/upload-keystore.jks
