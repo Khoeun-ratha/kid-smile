@@ -228,13 +228,13 @@ shapes and nature - in English and Khmer, fully offline, no ads.
  8. PUBLISHING AN UPDATE LATER
 ========================================================================
 
-1. In D:\Mobile\kid_smile\mobile\pubspec.yaml change
-      version: 1.0.0+1   ->   version: 1.0.1+2
-   (the number after + must always go up)
-2. Build:
-      cd D:\Mobile\kid_smile\mobile
-      flutter build appbundle --release
-3. Upload the new app-release.aab in Play Console -> Production -> Create release.
+In PowerShell, from D:\Mobile\kid_smile:
+
+      .\store\build-release.ps1 -Bump
+
+This raises the version (1.0.0+1 -> 1.0.1+2), builds the signed bundle and
+copies it to your Desktop as kid-smile-<version>.aab. Upload that file in
+Play Console -> Production -> Create release, then commit pubspec.yaml.
 
 On a new computer: copy key.properties.backup from the key folder to
 D:\Mobile\kid_smile\mobile\android\key.properties and update storeFile
@@ -243,6 +243,9 @@ if the keystore is in a different place.
 ========================================================================
  9. PRIVACY POLICY TEXT
 ========================================================================
+
+Upload key details, fingerprints and how to restore the key on a new
+computer: D:\Mobile\kid_smile\store\keystore-info.txt
 
 The policy is online at the URL above. A plain-text copy is in
 D:\Mobile\kid_smile\store\privacy-policy.txt

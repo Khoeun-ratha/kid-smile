@@ -10,6 +10,9 @@ through the steps in order.
 | Icon, feature graphic, screenshots | [`graphics/`](graphics/) |
 | Privacy policy | [`../PRIVACY.md`](../PRIVACY.md), public link: https://github.com/Khoeun-ratha/kid-smile/blob/main/PRIVACY.md |
 | Upload key | `D:\Mobile\kid_smile-release\` (**outside the repo — back it up!**) |
+| Key fingerprints, restore steps | [`keystore-info.txt`](keystore-info.txt) |
+| One-step release build | `.\store\build-release.ps1` (add `-Bump` for a new version) |
+| Everything above as one text file | [`play-store-release.txt`](play-store-release.txt) |
 
 ---
 
