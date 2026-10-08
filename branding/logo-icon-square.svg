@@ -9,7 +9,7 @@
       <stop offset="0.55" stop-color="#FFD84D"/>
       <stop offset="1" stop-color="#FFB72B"/>
     </radialGradient>
-    <clipPath id="tile"><rect width="1024" height="1024" rx="224"/></clipPath>
+    <clipPath id="tile"><rect width="1024" height="1024"/></clipPath>
     <clipPath id="mouth">
       <path d="M362 586 C362 586 662 586 662 586 C652 742 372 742 362 586 Z"/>
     </clipPath>
@@ -17,7 +17,7 @@
 
   <g clip-path="url(#tile)">
   <!-- background -->
-  <rect width="1024" height="1024" rx="224" fill="url(#sky)"/>
+  <rect width="1024" height="1024" fill="url(#sky)"/>
   <!-- soft bubbles like the app background -->
   <circle cx="150" cy="190" r="70" fill="#FFFFFF" opacity="0.18"/>
   <circle cx="880" cy="860" r="110" fill="#FFFFFF" opacity="0.14"/>

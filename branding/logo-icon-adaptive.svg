@@ -9,7 +9,7 @@
       <stop offset="0.55" stop-color="#FFD84D"/>
       <stop offset="1" stop-color="#FFB72B"/>
     </radialGradient>
-    <clipPath id="tile"><rect width="1024" height="1024" rx="224"/></clipPath>
+    <clipPath id="tile"><rect width="1024" height="1024"/></clipPath>
     <clipPath id="mouth">
       <path d="M362 586 C362 586 662 586 662 586 C652 742 372 742 362 586 Z"/>
     </clipPath>
@@ -17,11 +17,13 @@
 
   <g clip-path="url(#tile)">
   <!-- background -->
-  <rect width="1024" height="1024" rx="224" fill="url(#sky)"/>
+  <rect width="1024" height="1024" fill="url(#sky)"/>
   <!-- soft bubbles like the app background -->
   <circle cx="150" cy="190" r="70" fill="#FFFFFF" opacity="0.18"/>
   <circle cx="880" cy="860" r="110" fill="#FFFFFF" opacity="0.14"/>
   <circle cx="120" cy="840" r="46" fill="#FFFFFF" opacity="0.2"/>
+  <rect y="880" width="1024" height="144" fill="#6CC47A"/>
+  <g transform="translate(512 512) scale(0.68) translate(-512 -512)">
   <!-- sun rays -->
   <g fill="#FFD84D">
     <g transform="translate(512 530)">
@@ -69,5 +71,6 @@
   <path d="M0 860 C220 770 420 800 560 860 C700 920 860 890 1024 820 L1024 800 L1024 1024 L0 1024 Z" fill="#8FD694"/>
   <path d="M0 930 C260 860 520 900 700 950 C820 985 940 975 1024 950 L1024 1024 L0 1024 Z" fill="#6CC47A"/>
 
+  </g>
   </g>
 </svg>
