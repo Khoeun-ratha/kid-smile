@@ -20,9 +20,7 @@ through the steps in order.
    password) to a USB drive or private cloud storage. Never put it in git
    or share it. Without it you can't publish updates (Google can reset it,
    but that takes days).
-2. In `../PRIVACY.md`, replace **`[YOUR CONTACT EMAIL]`** with the email you
-   want parents to use, then commit and push.
-3. Create a Google Play developer account at
+2. Create a Google Play developer account at
    https://play.google.com/console (one-time US$25 fee, identity
    verification can take a few days).
 

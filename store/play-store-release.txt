@@ -1,0 +1,248 @@
+﻿KID SMILE - GOOGLE PLAY RELEASE KIT
+Prepared: 8 October 2026
+Everything you need to publish Kid Smile on Google Play, in one file.
+Follow the sections in order. Copy text exactly as shown between the lines.
+
+========================================================================
+ 1. FILES TO UPLOAD
+========================================================================
+
+App bundle (.aab):
+  D:\Mobile\kid_smile\mobile\build\app\outputs\bundle\release\app-release.aab
+
+App icon 512 x 512:
+  D:\Mobile\kid_smile\store\graphics\app-icon-512.png
+
+Feature graphic 1024 x 500:
+  D:\Mobile\kid_smile\store\graphics\feature-graphic-1024x500.png
+
+Phone screenshots (upload all 6, in this order):
+  D:\Mobile\kid_smile\store\graphics\phone-screenshot-1.png  (Fun quizzes for curious kids)
+  D:\Mobile\kid_smile\store\graphics\phone-screenshot-2.png  (Pick a topic)
+  D:\Mobile\kid_smile\store\graphics\phone-screenshot-3.png  (Big, friendly questions)
+  D:\Mobile\kid_smile\store\graphics\phone-screenshot-4.png  (Learn from every answer)
+  D:\Mobile\kid_smile\store\graphics\phone-screenshot-5.png  (English or Khmer)
+  D:\Mobile\kid_smile\store\graphics\phone-screenshot-6.png  (Works offline, no ads)
+
+========================================================================
+ 2. APP DETAILS
+========================================================================
+
+App name ............ Kid Smile: Fun Kids Quiz
+Package name ........ com.kidsmile.kid_smile   (cannot be changed later)
+Version ............. 1.0.0  (version code 1)
+Min Android ......... 7.0 (API 24)
+Target SDK .......... 36
+Price ............... Free
+App or game ......... Game  -> category: Educational
+                      (or App -> category: Education)
+Default language .... English (United States) - en-US
+Translation ......... Khmer - km-KH
+Contact email ....... kh.ratha17@gmail.com
+Privacy policy URL .. https://github.com/Khoeun-ratha/kid-smile/blob/main/PRIVACY.md
+
+========================================================================
+ 3. STORE LISTING - ENGLISH (en-US)
+========================================================================
+
+App name (max 30 chars):
+------------------------------------------------------------------------
+Kid Smile: Fun Kids Quiz
+------------------------------------------------------------------------
+
+Short description (max 80 chars):
+------------------------------------------------------------------------
+Fun offline quizzes for kids in English and Khmer. No ads, no sign-up!
+------------------------------------------------------------------------
+
+Full description (max 4000 chars):
+------------------------------------------------------------------------
+Kid Smile turns learning into play! 😄
+
+Children answer bright, friendly quiz questions about the world around them – with big buttons, colorful pictures and happy cheers for every answer.
+
+🐶 5 FUN TOPICS
+• Animals – sounds, homes, legs and more
+• Colors – what color is the sun, the grass, a banana?
+• Numbers – counting and simple math
+• Shapes – circles, squares, triangles and stars
+• Nature – weather, plants, the sky and seasons
+• Mixed Quiz – a little of everything!
+
+🇰🇭 ENGLISH OR KHMER
+Play in English or in Khmer (ខ្មែរ). Switch any time in Settings – great for learning both languages.
+
+✈️ WORKS 100% OFFLINE
+More than 1,000 questions are built in. No Wi-Fi or mobile data needed – perfect for car trips, waiting rooms and anywhere else.
+
+⏱️ SHORT, KID-SIZED ROUNDS
+Choose 6, 8 or 10 questions. A friendly timer keeps the game moving, and kids see the right answer straight away, so every mistake becomes a chance to learn.
+
+⭐ STARS & PROGRESS
+Earn up to 3 stars per round, review the answers, and watch your best score grow in "My Progress".
+
+👨‍👩‍👧 SAFE FOR KIDS
+• No ads
+• No in-app purchases
+• No accounts or sign-up
+• No personal data collected – ever
+
+Kid Smile is made for children aged about 4 to 8. Have fun, learn something new, and keep smiling!
+------------------------------------------------------------------------
+
+========================================================================
+ 4. STORE LISTING - KHMER (km-KH)  [Manage translations -> Add Khmer]
+========================================================================
+
+(Please read once to make sure the Khmer sounds natural.)
+
+App name (max 30 chars):
+------------------------------------------------------------------------
+Kid Smile: សំណួរកម្សាន្តកុមារ
+------------------------------------------------------------------------
+
+Short description (max 80 chars):
+------------------------------------------------------------------------
+ល្បែងសំណួរសម្រាប់កុមារ ជាភាសាខ្មែរ និងអង់គ្លេស។ លេងបានដោយគ្មានអ៊ីនធឺណិត!
+------------------------------------------------------------------------
+
+Full description:
+------------------------------------------------------------------------
+Kid Smile ធ្វើឲ្យការរៀនក្លាយជាការលេង! 😄
+
+កុមារឆ្លើយសំណួរដ៏សប្បាយ អំពីពិភពលោកជុំវិញខ្លួន ជាមួយប៊ូតុងធំៗ រូបភាពចម្រុះពណ៌ និងការលើកទឹកចិត្តគ្រប់ចម្លើយ។
+
+🐶 ប្រធានបទ ៥
+• សត្វ
+• ពណ៌
+• លេខ
+• រាងធរណីមាត្រ
+• ធម្មជាតិ
+• សំណួរចម្រុះ – បន្តិចពីគ្រប់ប្រធានបទ!
+
+🇰🇭 ភាសាខ្មែរ ឬ អង់គ្លេស
+លេងជាភាសាខ្មែរ ឬ អង់គ្លេស។ អាចប្ដូរភាសាបានគ្រប់ពេលនៅក្នុង ការកំណត់។
+
+✈️ លេងបានដោយគ្មានអ៊ីនធឺណិត
+មានសំណួរជាង ១០០០ នៅក្នុងកម្មវិធី។ មិនត្រូវការ Wi-Fi ឬ ទិន្នន័យទូរសព្ទឡើយ។
+
+⏱️ វគ្គខ្លីៗ សមស្របសម្រាប់កុមារ
+ជ្រើសរើស ៦, ៨ ឬ ១០ សំណួរ។ កុមារឃើញចម្លើយត្រឹមត្រូវភ្លាមៗ ដូច្នេះកំហុសនីមួយៗក្លាយជាឱកាសរៀន។
+
+⭐ ផ្កាយ និងវឌ្ឍនភាព
+ទទួលបានផ្កាយរហូតដល់ ៣ ក្នុងមួយវគ្គ ហើយមើលពិន្ទុល្អបំផុតរបស់អ្នកនៅក្នុង «វឌ្ឍនភាពរបស់ខ្ញុំ»។
+
+👨‍👩‍👧 សុវត្ថិភាពសម្រាប់កុមារ
+• គ្មានការផ្សាយពាណិជ្ជកម្ម
+• គ្មានការទិញក្នុងកម្មវិធី
+• មិនចាំបាច់ចុះឈ្មោះ
+• មិនប្រមូលព័ត៌មានផ្ទាល់ខ្លួនឡើយ
+
+Kid Smile សម្រាប់កុមារអាយុប្រហែល ៤ ដល់ ៨ ឆ្នាំ។ រៀនសប្បាយ ហើយញញឹមជានិច្ច!
+------------------------------------------------------------------------
+
+========================================================================
+ 5. APP CONTENT FORMS  (Play Console -> Policy -> App content)
+========================================================================
+
+Privacy policy
+  URL: https://github.com/Khoeun-ratha/kid-smile/blob/main/PRIVACY.md
+
+App access
+  [x] All functionality in my app is available without any access restrictions
+
+Ads
+  [x] No, my app does not contain ads
+
+Content rating (IARC questionnaire)
+  Email: kh.ratha17@gmail.com
+  Category: Reference, News, or Educational  (or "Game" if you chose Game)
+  Answer NO to every question:
+    violence, blood, fear/horror, sexuality, nudity, bad language,
+    drugs/alcohol/tobacco, gambling, users can interact or chat,
+    shares user location, digital purchases, unrestricted internet
+  Expected result: Everyone / PEGI 3 / 3+
+
+Target audience and content
+  Age groups: [x] 5 and under   [x] 6-8
+  Could the app unintentionally appeal to children? -> it is FOR children
+  (This enrolls the app in the Google Play Families policy. Kid Smile
+   already complies: no ads, no tracking, no data collection.)
+
+Data safety
+  Does your app collect or share any of the required user data types? -> NO
+  (Scores and the chosen language are saved only on the phone. Data that
+   never leaves the device does not count as "collected".)
+  Result shown on store: "No data collected" / "No data shared"
+
+Government app ........ No
+Financial features .... My app doesn't provide any financial features
+Health ................ No health features
+News app .............. No
+COVID-19 app .......... No
+Advertising ID ........ No (the app does not use the advertising ID)
+
+========================================================================
+ 6. STEP BY STEP
+========================================================================
+
+BEFORE YOU START
+  [ ] Back up D:\Mobile\kid_smile-release\ (upload-keystore.jks and
+      key.properties.backup, which holds the password) to a USB drive or
+      private cloud. Never share it or put it in GitHub. You need it to
+      publish every future update.
+  [ ] Create a developer account: https://play.google.com/console
+      (one-time US$25, ID verification can take a few days)
+
+CREATE THE APP
+  [ ] Play Console -> Create app -> fill in section 2 above
+  [ ] Fill in all forms in section 5
+  [ ] Grow -> Store presence -> Main store listing -> sections 1, 3, 4
+
+CLOSED TEST (required for new personal accounts)
+  [ ] Testing -> Closed testing -> Create track
+  [ ] Add at least 12 testers (their Gmail addresses or a Google Group)
+  [ ] Create release -> upload app-release.aab -> release name: 1.0.0
+  [ ] Accept "Play App Signing" when asked (recommended)
+  [ ] Send testers the opt-in link; they install and keep it 14 days
+
+PRODUCTION
+  [ ] After 14 days with 12+ testers: Dashboard -> Apply for production
+  [ ] Production -> Create release -> upload the bundle -> Send for review
+  [ ] Review usually takes a few days (longer for kids apps)
+
+========================================================================
+ 7. RELEASE NOTES ("What's new") FOR VERSION 1.0.0
+========================================================================
+
+<en-US>
+First release of Kid Smile! Fun quizzes about animals, colors, numbers,
+shapes and nature - in English and Khmer, fully offline, no ads.
+</en-US>
+<km-KH>
+ការចេញផ្សាយដំបូងរបស់ Kid Smile! សំណួរសប្បាយៗអំពីសត្វ ពណ៌ លេខ រាង និងធម្មជាតិ
+ជាភាសាខ្មែរ និងអង់គ្លេស លេងបានដោយគ្មានអ៊ីនធឺណិត និងគ្មានការផ្សាយពាណិជ្ជកម្ម។
+</km-KH>
+
+========================================================================
+ 8. PUBLISHING AN UPDATE LATER
+========================================================================
+
+1. In D:\Mobile\kid_smile\mobile\pubspec.yaml change
+      version: 1.0.0+1   ->   version: 1.0.1+2
+   (the number after + must always go up)
+2. Build:
+      cd D:\Mobile\kid_smile\mobile
+      flutter build appbundle --release
+3. Upload the new app-release.aab in Play Console -> Production -> Create release.
+
+On a new computer: copy key.properties.backup from the key folder to
+D:\Mobile\kid_smile\mobile\android\key.properties and update storeFile
+if the keystore is in a different place.
+
+========================================================================
+ 9. PRIVACY POLICY TEXT
+========================================================================
+
+The policy is online at the URL above. A plain-text copy is in
+D:\Mobile\kid_smile\store\privacy-policy.txt

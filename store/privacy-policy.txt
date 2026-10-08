@@ -1,14 +1,16 @@
-# Kid Smile — Privacy Policy
+﻿Kid Smile — Privacy Policy
+==========================
 
-_Last updated: 8 October 2026_
+Last updated: 8 October 2026
 
 Kid Smile is a quiz game for young children. We built it to be safe for
-kids: **it does not collect, store on any server, or share any personal
-information.**
+kids: it does not collect, store on any server, or share any personal
+information.
 
-## What the app collects
+WHAT THE APP COLLECTS
+---------------------
 
-**Nothing.** Kid Smile has:
+Nothing. Kid Smile has:
 
 - no sign-up, accounts, or logins
 - no advertising
@@ -16,10 +18,11 @@ information.**
 - no in-app purchases
 - no access to the camera, microphone, location, contacts, or photos
 
-## What stays on the device
+WHAT STAYS ON THE DEVICE
+------------------------
 
-To work, the app saves a few things **only on the phone or tablet it is
-installed on**:
+To work, the app saves a few things only on the phone or tablet it is
+installed on:
 
 - the quiz questions that come with the app
 - the chosen language (English or Khmer)
@@ -28,24 +31,28 @@ installed on**:
 This information never leaves the device. Uninstalling the app, or clearing
 its data in the device settings, deletes all of it.
 
-## Internet
+INTERNET
+--------
 
 The version of Kid Smile on Google Play works completely offline and does
 not send or receive any data over the internet. All questions are included
 in the app.
 
-## Children's privacy
+CHILDREN'S PRIVACY
+------------------
 
 Kid Smile is designed for children and follows Google Play's Families
 Policy. Because we collect no personal information at all, there is
 nothing for a parent to review or delete on our side.
 
-## Changes
+CHANGES
+-------
 
 If this policy ever changes (for example, if a future version adds online
 features), we will update this page and the date above before releasing
 that version.
 
-## Contact
+CONTACT
+-------
 
-Questions about this policy: **kh.ratha17@gmail.com**
+Questions about this policy: kh.ratha17@gmail.com
