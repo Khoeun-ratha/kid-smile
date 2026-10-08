@@ -1,0 +1,6 @@
+1|file:///D:/Mobile/kid_smile/store/build/shot.html?t=Fun+quizzes+for+curious+kids&s=Animals%2C+colors%2C+numbers%2C+shapes+%26+nature&i=raw%2Fo1.png
+2|file:///D:/Mobile/kid_smile/store/build/shot.html?t=Pick+a+topic%2C+play+in+minutes&s=Short+rounds+of+6%2C+8+or+10+questions&i=raw%2Fs3.png
+3|file:///D:/Mobile/kid_smile/store/build/shot.html?t=Big%2C+friendly+questions&s=Easy+to+read%2C+with+emojis+kids+love&i=raw%2Fs4.png
+4|file:///D:/Mobile/kid_smile/store/build/shot.html?t=Learn+from+every+answer&s=See+the+right+answer+straight+away&i=raw%2Fs7.png
+5|file:///D:/Mobile/kid_smile/store/build/shot.html?t=Play+in+English+or+Khmer&s=%E1%9E%9B%E1%9F%81%E1%9E%84%E1%9E%87%E1%9E%B6%E1%9E%97%E1%9E%B6%E1%9E%9F%E1%9E%B6%E1%9E%A2%E1%9E%84%E1%9F%8B%E1%9E%82%E1%9F%92%E1%9E%9B%E1%9F%81%E1%9E%9F+%E1%9E%AC+%E1%9E%81%E1%9F%92%E1%9E%98%E1%9F%82%E1%9E%9A&i=raw%2Fq0.png
+6|file:///D:/Mobile/kid_smile/store/build/shot.html?t=Works+offline.+No+ads.&s=Over+1%2C000+questions+built+in&i=raw%2Fo2.png
