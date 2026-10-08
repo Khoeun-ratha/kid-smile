@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android blocks plain http:// by default. The development API runs on
+     the local network without TLS, so allow cleartext only to that host
+     (and the emulator's alias for the dev machine). Everything else stays
+     HTTPS-only. Switch SyncService.baseUrl to https:// for production and
+     drop these entries. -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.8.169</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

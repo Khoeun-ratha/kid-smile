@@ -1,0 +1,19 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+
+# Environment files (keep only examples)
+.env
+.env.*
+!.env.example
+
+# Local databases
+*.db
+*.sqlite3
+
+# Android signing secrets (never commit)
+*.jks
+*.keystore
+key.properties
