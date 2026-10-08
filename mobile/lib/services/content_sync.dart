@@ -24,6 +24,10 @@ class ContentSync extends ChangeNotifier {
   }) : _sync = sync ?? SyncService(),
        _changes = connectivityChanges;
 
+  /// False for offline-only builds: no server is configured, so there is
+  /// nothing to sync and no connection state worth showing.
+  bool get enabled => _sync.enabled;
+
   bool _online = true;
 
   /// Whether the device has a network connection (it may still be unable
@@ -41,7 +45,7 @@ class ContentSync extends ChangeNotifier {
   /// Starts watching the connection. Call once, after the bundled packs
   /// are seeded, so a sync can never race the seed import.
   Future<void> start() async {
-    if (_subscription != null) return;
+    if (_subscription != null || !enabled) return;
     final connectivity = Connectivity();
     _subscription = (_changes ?? connectivity.onConnectivityChanged).listen(
       _onConnectivity,

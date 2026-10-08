@@ -43,6 +43,7 @@ class _SplashScreenState extends State<SplashScreen>
     // Make sure the persisted language choice is loaded before anything
     // below reads it — main.dart kicks this off but doesn't block on it.
     final appLanguage = context.read<AppLanguage>();
+    final contentSync = context.read<ContentSync>();
     await appLanguage.load();
 
     final repository = PackRepository();
@@ -51,14 +52,14 @@ class _SplashScreenState extends State<SplashScreen>
     // ship a bundled starter pack, so either language works on a fresh
     // install.
     await Future.wait([
-      repository.ensureSeeded(),
+      repository.ensureSeeded(serverSync: contentSync.enabled),
       _intro.forward().orCancel.catchError((_) {}),
     ]);
 
     // Best-effort: from here on, newer content is fetched in the background
     // now and whenever the connection comes back — never blocking play.
     if (!mounted) return;
-    unawaited(context.read<ContentSync>().start());
+    unawaited(contentSync.start());
 
     if (!mounted) return;
     Navigator.of(context).pushReplacement(kidRoute(const HomeScreen()));

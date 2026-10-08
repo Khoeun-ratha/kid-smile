@@ -20,15 +20,17 @@ class SyncService {
 
   SyncService({
     PackRepository? repository,
-    // Release builds pass the deployed API:
-    // flutter build apk --dart-define=API_URL=https://<api-host>
-    this.baseUrl = const String.fromEnvironment(
-      'API_URL',
-      defaultValue: 'http://192.168.8.169:8000',
-    ),
+    // No API_URL means an offline-only build that plays the bundled packs
+    // and never contacts a server. Builds that should sync pass one:
+    // flutter run --dart-define=API_URL=http://192.168.8.169:8000
+    this.baseUrl = const String.fromEnvironment('API_URL'),
   }) : _repository = repository ?? PackRepository();
 
+  /// False for offline-only builds (no API_URL).
+  bool get enabled => baseUrl.isNotEmpty;
+
   Future<SyncStatus> syncIfOnline(String language) async {
+    if (!enabled) return SyncStatus.offline;
     final connectivity = await Connectivity().checkConnectivity();
     final isOnline = !connectivity.contains(ConnectivityResult.none);
     if (!isOnline) return SyncStatus.offline;

@@ -131,25 +131,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       );
                     },
                   ),
-                  const SizedBox(height: 14),
-                  KidButton(
-                    icon: Icons.cloud_download_rounded,
-                    label: t('check_for_new_questions', lang),
-                    color: _sky,
-                    loading: _checking,
-                    onTap: _checkForUpdates,
-                  ),
-                  AnimatedSize(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeOutCubic,
-                    alignment: Alignment.topCenter,
-                    child: _status == null
-                        ? const SizedBox(width: double.infinity)
-                        : Padding(
-                            padding: const EdgeInsets.only(top: 14),
-                            child: _StatusBanner(status: _status!, lang: lang),
-                          ),
-                  ),
+                  // Offline-only builds have no server to check.
+                  if (context.read<ContentSync>().enabled) ...[
+                    const SizedBox(height: 14),
+                    KidButton(
+                      icon: Icons.cloud_download_rounded,
+                      label: t('check_for_new_questions', lang),
+                      color: _sky,
+                      loading: _checking,
+                      onTap: _checkForUpdates,
+                    ),
+                    AnimatedSize(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeOutCubic,
+                      alignment: Alignment.topCenter,
+                      child: _status == null
+                          ? const SizedBox(width: double.infinity)
+                          : Padding(
+                              padding: const EdgeInsets.only(top: 14),
+                              child: _StatusBanner(
+                                status: _status!,
+                                lang: lang,
+                              ),
+                            ),
+                    ),
+                  ],
                 ],
               ),
             ),

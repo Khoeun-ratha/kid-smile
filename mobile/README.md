@@ -1,21 +1,36 @@
 # Kid Smile — mobile (Flutter)
 
 Offline-first quiz app for kids. Works fully offline from first launch using a
-bundled seed question pack, and silently syncs newer content from the API
-(`../api`) when a network connection is available.
+bundled seed question pack. Builds given an `API_URL` also sync newer content
+from the API (`../api`) when a network connection is available.
 
 ## Run
 
 ```
 flutter pub get
-flutter run
+flutter run                          # offline-only: bundled questions, no server
+flutter build apk --release          # offline-only release
 ```
 
-No backend needs to be running — the app plays entirely from local SQLite.
-To test the sync path, start the API (`../api/README.md`) and run on an
-Android emulator, which reaches your machine's `localhost` via `10.0.2.2`
-(already the default `baseUrl` in `lib/services/sync_service.dart`). For a
-physical device or iOS simulator, change `baseUrl` to your machine's LAN IP.
+By default the app is **offline-only**: it plays the bundled packs from local
+SQLite, never contacts a server, and hides "Check for new questions". If a
+device previously synced from a server, an offline build restores the full
+bundled packs on next launch.
+
+To turn on sync, pass the API address at build time:
+
+```
+flutter run --dart-define=API_URL=http://192.168.8.169:8000      # dev API on the LAN
+flutter build apk --release --dart-define=API_URL=https://<api-host>
+```
+
+An Android emulator reaches your machine's `localhost` via `10.0.2.2`. Plain
+`http://` only works for the hosts listed in
+`android/app/src/main/res/xml/network_security_config.xml`.
+
+Before pointing a sync build at a server, make sure that server holds the
+full question set: a sync **replaces** the device's questions for that
+language with whatever the server has.
 
 ## Structure
 

@@ -9,6 +9,8 @@ import 'package:kid_smile/services/sync_service.dart';
 /// Records calls instead of touching the network; tracks overlap so we can
 /// prove syncs never run in parallel.
 class _FakeSync extends SyncService {
+  _FakeSync({super.baseUrl = 'http://test.invalid'});
+
   final calls = <String>[];
   SyncStatus result = SyncStatus.upToDate;
   int _running = 0;
@@ -43,6 +45,19 @@ void main() {
   tearDown(() {
     sync.dispose();
     network.close();
+  });
+
+  test('offline-only build (no API_URL) never syncs', () async {
+    final offline = _FakeSync(baseUrl: '');
+    final offlineSync = ContentSync(
+      sync: offline,
+      connectivityChanges: const Stream.empty(),
+    );
+    addTearDown(offlineSync.dispose);
+    expect(offlineSync.enabled, isFalse);
+    await offlineSync.start();
+    await _flush();
+    expect(offline.calls, isEmpty);
   });
 
   test('syncs both languages at startup', () async {

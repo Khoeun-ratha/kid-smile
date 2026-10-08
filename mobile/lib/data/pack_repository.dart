@@ -31,23 +31,33 @@ class PackRepository {
   /// A bundled pack is also re-imported when the app ships a newer
   /// `seed_revision` than the one on disk — unless that language's content
   /// has since come from the server, which always wins over bundled data.
-  Future<void> ensureSeeded() async {
+  ///
+  /// With [serverSync] off (an offline-only build) the bundled packs are the
+  /// only source of truth: content left over from an earlier server sync is
+  /// replaced by them, since nothing will ever refresh it again.
+  Future<void> ensureSeeded({bool serverSync = true}) async {
     final prefs = await SharedPreferences.getInstance();
     for (final language in const ['en', 'km']) {
-      if (prefs.getBool('$_kServerContentKeyPrefix$language') ?? false) {
-        continue;
-      }
+      final fromServer =
+          prefs.getBool('$_kServerContentKeyPrefix$language') ?? false;
+      if (fromServer && serverSync) continue;
       final hasContent = await _dbHelper.hasContent(language);
       final storedRevision =
           prefs.getInt('$_kSeedRevisionKeyPrefix$language') ?? 0;
       final seed = await _dbHelper.loadSeedPack(language);
-      if (hasContent && storedRevision >= seed.seedRevision) continue;
+      if (!fromServer && hasContent && storedRevision >= seed.seedRevision) {
+        continue;
+      }
 
       await _dbHelper.importPack(seed, language);
       await prefs.setInt(
         '$_kSeedRevisionKeyPrefix$language',
         seed.seedRevision,
       );
+      if (fromServer) {
+        await prefs.remove('$_kServerContentKeyPrefix$language');
+        await prefs.remove('$_kPackVersionKeyPrefix$language');
+      }
       if (language == 'en') {
         await setLocalPackVersion(language, seed.version);
       }
