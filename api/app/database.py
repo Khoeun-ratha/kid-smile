@@ -41,3 +41,22 @@ def sync_missing_columns() -> None:
                     continue
                 col_type = column.type.compile(dialect=engine.dialect)
                 conn.execute(text(f'ALTER TABLE "{table.name}" ADD COLUMN "{column.name}" {col_type}'))
+
+
+# Rows inserted with explicit ids (seed, /admin/import) don't advance
+# Postgres's id sequences, so the next auto-assigned id would collide. Call
+# this after such inserts; it's a no-op on SQLite, which uses MAX(id) + 1.
+def sync_id_sequences() -> None:
+    if engine.dialect.name != "postgresql":
+        return
+    with engine.begin() as conn:
+        for table in Base.metadata.tables.values():
+            if "id" not in table.columns:
+                continue
+            seq = conn.execute(text(f"SELECT pg_get_serial_sequence('{table.name}', 'id')")).scalar()
+            if seq is None:
+                continue
+            conn.execute(
+                text(f'SELECT setval(:seq, COALESCE(MAX(id), 1), MAX(id) IS NOT NULL) FROM "{table.name}"'),
+                {"seq": seq},
+            )

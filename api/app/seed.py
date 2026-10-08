@@ -4,7 +4,7 @@ ships offline, so the API is demoable immediately: `python -m app.seed`."""
 import json
 from pathlib import Path
 
-from .database import Base, SessionLocal, engine, sync_missing_columns
+from .database import Base, SessionLocal, engine, sync_id_sequences, sync_missing_columns
 from .models import Category, Meta, Question
 
 SEED_PATH = Path(__file__).resolve().parent.parent.parent / "mobile" / "assets" / "seed_pack.json"
@@ -47,6 +47,7 @@ def seed() -> None:
             )
         db.add(Meta(id=1, pack_version=data["version"]))
         db.commit()
+        sync_id_sequences()
         print(f"Seeded {len(data['categories'])} categories and {len(data['questions'])} questions.")
     finally:
         db.close()

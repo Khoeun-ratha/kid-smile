@@ -1,0 +1,36 @@
+# Render Blueprint: deploys the FastAPI backend in api/ with a Postgres
+# database. In Render: New > Blueprint > pick this repo.
+services:
+  - type: web
+    name: kid-smile-api
+    runtime: python
+    region: singapore
+    plan: free
+    # Commands run from the repo root (not rootDir: api) because the seed
+    # script reads mobile/assets/seed_pack.json.
+    buildCommand: pip install -r api/requirements.txt
+    # Seeding is a no-op once the database has content.
+    startCommand: cd api && python -m app.seed && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - api/**
+        - mobile/assets/seed_pack.json
+        - render.yaml
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kid-smile-db
+          property: connectionString
+
+databases:
+  - name: kid-smile-db
+    region: singapore
+    plan: free
+    databaseName: kid_smile
+    user: kid_smile

@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from . import models, schemas
 from .auth import require_admin
-from .database import Base, engine, get_db, sync_missing_columns
+from .database import Base, engine, get_db, sync_id_sequences, sync_missing_columns
 from .routers import categories, pack, questions
 
 Base.metadata.create_all(bind=engine)
@@ -61,6 +61,7 @@ def import_data(payload: schemas.ImportPayload, db: Session = Depends(get_db)):
         data.pop("id", None)
         db.add(models.Question(**data))
     db.commit()
+    sync_id_sequences()
 
     return {
         "categories": len(payload.categories),
